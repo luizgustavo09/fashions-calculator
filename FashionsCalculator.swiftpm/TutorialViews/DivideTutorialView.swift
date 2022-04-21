@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-struct Add: View {
+struct DivideTutorialView: View {
     @State var selection: Int? = nil
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("add")
+                Image("share")
                     .resizable()
-                    //.aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
                 Button() {
                     selection = 1
@@ -28,7 +27,7 @@ struct Add: View {
             }
             .statusBar(hidden: true)
             .navigationBarHidden(true)
-            NavigationLink(destination: Subtract(), tag: 1, selection: $selection) {
+            NavigationLink(destination: TimerTutorialView(), tag: 1, selection: $selection) {
                 EmptyView()
             }
         }

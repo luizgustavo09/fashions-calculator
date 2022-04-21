@@ -1,22 +1,22 @@
 //
 //  SwiftUIView.swift
-//  
+//
 //
 //  Created by Luiz Gustavo Silva Aguiar on 19/04/22.
 //
 
 import SwiftUI
 
-struct HowToPlay: View {
+struct PlayView: View {
     @State var selection: Int? = nil
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("tutorial1")
+                Image("play")
                     .resizable()
                     //.aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
-                Image("startButton")
+                Image("botaostart")
                     .resizable()
                     .scaledToFit()
                     .padding(EdgeInsets(top: geometry.size.height * 0, leading: geometry.size.width * 0.4, bottom: geometry.size.height * 0.05, trailing: geometry.size.width * 0.4))
@@ -27,7 +27,7 @@ struct HowToPlay: View {
             }
             .statusBar(hidden: true)
             .navigationBarHidden(true)
-            NavigationLink(destination: Add(), tag: 1, selection: $selection) {
+            NavigationLink(destination: GameView(), tag: 1, selection: $selection) {
                 EmptyView()
             }
         }

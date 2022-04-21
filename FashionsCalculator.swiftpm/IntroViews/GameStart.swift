@@ -28,7 +28,7 @@ struct GameStart: View {
         }
         .statusBar(hidden: true)
         .navigationBarHidden(true)
-        NavigationLink(destination: HowToPlay(), tag: 1, selection: $selection) {
+        NavigationLink(destination: HowToPlayTutorialView(), tag: 1, selection: $selection) {
             EmptyView()
         }
     }
