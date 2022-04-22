@@ -21,7 +21,7 @@ struct BalloonView: View {
         VStack {
             Text(text)
                 .padding()
-                .font(.system(size: 20))
+                .font(Font.custom("ArimaMadurai-Black", size: 30))
             HStack {
                 Spacer()
                 Button() {
@@ -30,7 +30,7 @@ struct BalloonView: View {
                     print(index)
                 } label: {
                     Text("next >>")
-                        .font(.system(size: 20))
+                        .font(Font.custom("ArimaMadurai-Black", size: 30))
                 }
                 .foregroundColor(.primaryPurple)
             } .padding()
