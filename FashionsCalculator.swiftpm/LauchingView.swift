@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Lauching: View {
+struct LauchingView: View {
     var body: some View {
         NavigationView {
             ZStack {

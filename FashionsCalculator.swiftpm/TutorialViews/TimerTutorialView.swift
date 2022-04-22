@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct Share: View {
+struct TimerTutorialView: View {
     @State var selection: Int? = nil
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("share")
+                Image("timer")
                     .resizable()
                     .edgesIgnoringSafeArea(.all)
                 Button() {
@@ -22,12 +22,12 @@ struct Share: View {
                         .font(.system(size: 30))
                 }
                 .foregroundColor(.primaryOrange)
-                .padding(EdgeInsets(top: geometry.size.height * 0.6, leading: geometry.size.width  * 0.8, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: geometry.size.height * 0.12, trailing: geometry.size.width  * 0.7))
                 
             }
             .statusBar(hidden: true)
             .navigationBarHidden(true)
-            NavigationLink(destination: Timer(), tag: 1, selection: $selection) {
+            NavigationLink(destination: ScoreTutorialView(), tag: 1, selection: $selection) {
                 EmptyView()
             }
         }

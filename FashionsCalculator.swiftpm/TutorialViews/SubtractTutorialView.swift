@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct Score: View {
+struct SubtractTutorialView: View {
     @State var selection: Int? = nil
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("score")
+                Image("subtract")
                     .resizable()
                     .edgesIgnoringSafeArea(.all)
                 Button() {
@@ -22,12 +22,12 @@ struct Score: View {
                         .font(.system(size: 30))
                 }
                 .foregroundColor(.primaryOrange)
-                .padding(EdgeInsets(top: 0, leading: geometry.size.width  * 0.80, bottom: 0, trailing:0))
+                .padding(EdgeInsets(top: geometry.size.height * 0.6, leading: geometry.size.width  * 0.8, bottom: 0, trailing: 0))
                 
             }
             .statusBar(hidden: true)
             .navigationBarHidden(true)
-            NavigationLink(destination: Play(), tag: 1, selection: $selection) {
+            NavigationLink(destination: MultiplyTutorialView(), tag: 1, selection: $selection) {
                 EmptyView()
             }
         }
