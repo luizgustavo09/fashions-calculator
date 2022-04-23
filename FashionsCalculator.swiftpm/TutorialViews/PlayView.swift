@@ -9,6 +9,9 @@ import SwiftUI
 
 struct PlayView: View {
     @State var selection: Int? = nil
+    init() {
+        UINavigationBar.setAnimationsEnabled(false)
+    }
     var body: some View {
         GeometryReader { geometry in
             ZStack {
