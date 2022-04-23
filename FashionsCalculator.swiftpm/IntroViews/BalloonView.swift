@@ -13,13 +13,15 @@ struct BalloonView: View {
         VStack(alignment: .leading, spacing: 20){
             Text(text)
                 .padding()
-                .font(.system(size: 30))
-            HStack{
+                .font(Font.custom("ArimaMadurai-Black", size: 30))
+            HStack {
                 Spacer()
                 Button() {
                     index += 1
                 } label: {
-                    Image("nextpurpleButton")
+
+                    Text("next >>")
+                        .font(Font.custom("ArimaMadurai-Black", size: 30))
                 }
             } .padding()
         }.padding()
