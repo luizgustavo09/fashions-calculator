@@ -18,11 +18,10 @@ struct DivideTutorialView: View {
                 Button() {
                     selection = 1
                 } label: {
-                    Text("next >>")
-                        .font(.system(size: 30))
+                    Image("next")
                 }
                 .foregroundColor(.primaryOrange)
-                .padding(EdgeInsets(top: geometry.size.height * 0.6, leading: geometry.size.width  * 0.8, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: geometry.size.height * 0.6, leading: 0, bottom: 0, trailing: geometry.size.width  * 0.8))
                 
             }
             .statusBar(hidden: true)

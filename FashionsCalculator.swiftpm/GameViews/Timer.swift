@@ -31,8 +31,6 @@ struct TimerView: View{
                 .font(.system(size: 70, weight: .light, design: .default))
                 .foregroundColor(Color("orange"))
         }
-        .padding(EdgeInsets(top: 50, leading: 850, bottom: 1300, trailing: 50))
-            
     }
 }
 

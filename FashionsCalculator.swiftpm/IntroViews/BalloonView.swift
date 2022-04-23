@@ -7,39 +7,25 @@ struct BalloonView: View {
     let bottom: CGFloat
     let trailling: CGFloat
     @Binding var index: Int
-    let start: Bool
-    @State var selection: Int? = nil
-    @ViewBuilder
-    var destination: some View {
-        if start {
-            GameStart()
-        } else {
-            Intro()
-        }
-    }
+    
+    
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 20){
             Text(text)
                 .padding()
-                .font(.system(size: 20))
-            HStack {
+                .font(.system(size: 30))
+            HStack{
                 Spacer()
                 Button() {
                     index += 1
-                    selection = 1
-                    print(index)
                 } label: {
-                    Text("next >>")
-                        .font(.system(size: 20))
+                    Image("nextpurpleButton")
                 }
-                .foregroundColor(.primaryPurple)
             } .padding()
-        }
+        }.padding()
         .background(RoundedRectangle(cornerRadius: 30).foregroundColor(.white))
         .padding(EdgeInsets(top: top, leading: leading, bottom: bottom, trailing: trailling))
-        NavigationLink(destination: destination, tag: 1, selection: $selection) {
-            EmptyView()
-        }
+        
     }
     
 }

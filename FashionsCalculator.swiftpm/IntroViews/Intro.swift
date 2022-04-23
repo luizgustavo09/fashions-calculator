@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct Intro: View {
-    @EnvironmentObject var viewModel: IntroViewModel
+    @State var index: Int = 0
+    
     var body: some View {
         GeometryReader { geometry in
             let texts = [
@@ -17,15 +18,18 @@ struct Intro: View {
                     , "So, with the four fundamentals operations you can decide give the right destination for this clothes..."
                     , "What you say me? Can you help me and the environment?"
             ]
-            ZStack {
-                Image("backgroundIntro")
-                    .resizable()
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
-                BalloonView(text: texts[viewModel.index], top: UIScreen.main.bounds.size.height * 0.5, leading: geometry.size.height * 0.04, bottom: 0, trailling: geometry.size.width * 0.5, index: $viewModel.index, start: (viewModel.index + 1 == texts.count))
+            if index <= 3{
+                ZStack(alignment: .center) {
+                    Image("backgroundIntro")
+                        .resizable()
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    BalloonView(text: texts[index], top: UIScreen.main.bounds.size.height * 0.5, leading: geometry.size.height * 0.04, bottom: 0, trailling: geometry.size.width * 0.5, index: $index)
+                }
+            }else{
+                GameStart()
             }
-            .statusBar(hidden: true)
-            .navigationBarHidden(true)
         }
     }
 }

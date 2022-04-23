@@ -14,6 +14,5 @@ struct LauchingView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
-        .environmentObject(IntroViewModel())
     }
 }
