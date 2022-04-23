@@ -25,12 +25,13 @@ struct TimerView: View{
     
     var body: some View{
         let timer = Timer(startTime: $time, viewIndex: $viewIndex)
-        ZStack{
-            Image("timerbg")
+        ZStack(alignment: .center){
             Text("0:0" + String(timer.time))
-                .font(.system(size: 70, weight: .light, design: .default))
+                .font(Font.custom("ArimaMadurai-Black", size: 70))
                 .foregroundColor(Color("orange"))
-        }
+                .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
+        }.background(RoundedRectangle(cornerRadius: 20).foregroundColor(Color("gray")))
+        
     }
 }
 

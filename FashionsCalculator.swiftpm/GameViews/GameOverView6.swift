@@ -35,7 +35,6 @@ struct GameOverSubview6: View{
     
     var body: some View{
         ZStack(alignment: .topLeading){
-            Image("g3")
             VStack(alignment: .center, spacing:30){
                 TextsView(plusStatus: plusStatus, minusStatus: minusStatus, divideStatus: divideStatus, multiplyStatus: multiplyStatus)
                 HStack(alignment: .center){
@@ -51,9 +50,8 @@ struct GameOverSubview6: View{
                     })
                 }
 
-            }.padding(.top, 20)
-            .padding(.leading, 58)
-        }
+            }.padding(EdgeInsets(top: 50, leading: 50, bottom: 50, trailing: 50))
+        }.background(RoundedRectangle(cornerRadius: 30).foregroundColor(.black))
 
     }
     
@@ -71,19 +69,19 @@ struct TextsView: View{
             HStack(alignment: .center, spacing: 30){
                 Text("score: ")
                     .foregroundColor(.white)
-                    .font(.system(size: 30, weight: .semibold, design: .default))
+                    .font(Font.custom("ArimaMadurai-Black", size: 30))
                 Text(String(result) + " points")
                     .foregroundColor(Color("purple"))
-                    .font(.system(size: 50, weight: .semibold, design: .default))
+                    .font(Font.custom("ArimaMadurai-Black", size: 60))
 
             }
             Text("you are a beginner, good job...")
                 .foregroundColor(Color("yellow"))
-                .font(.system(size: 30, weight: .semibold, design: .default))
+                .font(Font.custom("ArimaMadurai-Black", size: 30))
 
             Text("but you can do better for the environment!!")
                 .foregroundColor(.white)
-                .font(.system(size: 30, weight: .semibold, design: .default))
+                .font(Font.custom("ArimaMadurai-Black", size: 30))
         }
     }
 }

@@ -35,19 +35,18 @@ struct GameOverSubview3: View{
     
     var body: some View{
         ZStack(alignment: .topLeading){
-            Image("g2")
             VStack(alignment: .center, spacing:30){
-                ItenView(iconName: "minusIten", numberOfItens: minusStatus, textColor: "blue", bg: "bg", spacing: 10)
+                ItenView(iconName: "minusIten", numberOfItens: minusStatus, textColor: "blue", bg: "bg")
                     .padding(.top, 30)
                     Text("You sended " + String(minusStatus) + " clothing to garbage")
-                    .font(.system(size: 30, weight: .semibold, design: .default))
+                    .font(Font.custom("ArimaMadurai-Black", size: 30))
                     .foregroundColor(.white)
                 HStack(alignment: .center, spacing: 10){
                     Image("bad2humanity")
                     Image("bad2environment")
                 }
                 Text("-" + String(minusStatus*30) + " points")
-                    .font(.system(size: 50, weight: .semibold, design: .default))
+                    .font(Font.custom("ArimaMadurai-Black", size: 50))
                     .foregroundColor(Color("purple"))
                 HStack(){
                     Button {
@@ -56,12 +55,10 @@ struct GameOverSubview3: View{
                         Image("next")
                     }
                     
-                }.frame(width: 450, height: 0, alignment: .trailing)
-                    .padding(.top, 10)
-            }.padding(.leading, 50)
+                }
+            }.padding(EdgeInsets(top: 50, leading: 50, bottom: 50, trailing: 50))
 
-        }.frame(width: 450, height: 500, alignment: .center)
-        .padding(.leading, 50)
+        }.background(RoundedRectangle(cornerRadius: 30).foregroundColor(.black))
 
     }
     

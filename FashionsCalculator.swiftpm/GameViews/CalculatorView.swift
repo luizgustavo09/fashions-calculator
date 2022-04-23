@@ -17,7 +17,6 @@ struct CalculatorView: View {
 
     var body: some View {
         ZStack(alignment: .center){
-            Image("calculatorbg")
             HStack(alignment: .center, spacing: 50){
                     CalculatorButton(iconName: "plusButton"){
                         plusStatus+=1
@@ -41,8 +40,9 @@ struct CalculatorView: View {
                         viewIndex+=1
                         didTapButton.toggle()
                     }
-            }
-        }
+            }.padding(EdgeInsets(top: 30, leading: 50, bottom: 30, trailing: 50))
+
+        }.background(RoundedRectangle(cornerRadius: 20).foregroundColor(Color("gray")))
     }
 }
 

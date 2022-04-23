@@ -35,24 +35,29 @@ struct GameOverSubview1: View{
     
     var body: some View{
         ZStack(alignment: .leading){
-            Image("g1")
-            VStack(alignment: .trailing, spacing:10){
+            VStack(alignment: .leading, spacing:30){
+                Text("This is your score:")
+                    .font(Font.custom("ArimaMadurai-Black", size: 30))
+                    .foregroundColor(.white)
+
                 HStack(alignment: .center){
-                    ItenView(iconName: "plusIten", numberOfItens: plusStatus, textColor: "red", bg: "bg", spacing: 10)
-                    ItenView(iconName: "minusIten", numberOfItens: minusStatus, textColor: "blue", bg: "bg", spacing: 10)
-                    ItenView(iconName: "multiplyIten", numberOfItens: multiplyStatus, textColor: "green", bg: "bg", spacing: 10)
-                    ItenView(iconName: "divideIten", numberOfItens: divideStatus, textColor: "brown", bg: "bg", spacing: 10)
+                    ItenView(iconName: "plusIten", numberOfItens: plusStatus, textColor: "red", bg: "bg")
+                    ItenView(iconName: "minusIten", numberOfItens: minusStatus, textColor: "blue", bg: "bg")
+                    ItenView(iconName: "multiplyIten", numberOfItens: multiplyStatus, textColor: "green", bg: "bg")
+                    ItenView(iconName: "divideIten", numberOfItens: divideStatus, textColor: "brown", bg: "bg")
                 }
-                .padding(.top, 115)
-                .frame(width: 587, height: 250)
-                Button {
-                    index+=1
-                } label: {
-                    Image("next")
-                }.padding(.bottom, 90)
-                    .padding(.trailing, 30)
+                VStack{
+                HStack(){
+                    Button {
+                        index+=1
+                    } label: {
+                        Image("next")
+                    }
+                }
             }
-        }
+            }.padding(EdgeInsets(top: 50, leading: 50, bottom: 50, trailing: 50))
+
+        }.background(RoundedRectangle(cornerRadius: 30).foregroundColor(.black))
     }
     
 }

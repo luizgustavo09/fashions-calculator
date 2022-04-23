@@ -8,23 +8,23 @@ struct BalloonView: View {
     let trailling: CGFloat
     @Binding var index: Int
     
-    
     var body: some View {
-        VStack(alignment: .leading, spacing: 20){
+        VStack {
             Text(text)
-                .padding()
-                .font(Font.custom("ArimaMadurai-Black", size: 30))
+                .padding(EdgeInsets(top: 40, leading: 40, bottom: 10, trailing: 40))               .font(Font.custom("ArimaMadurai-Black", size: 30))
             HStack {
                 Spacer()
                 Button() {
                     index += 1
+                    print(index)
                 } label: {
-
                     Text("next >>")
                         .font(Font.custom("ArimaMadurai-Black", size: 30))
                 }
-            } .padding()
-        }.padding()
+                .foregroundColor(.primaryPurple)
+            }.padding(.trailing, 30)
+            .padding(.bottom, 20)
+        }
         .background(RoundedRectangle(cornerRadius: 30).foregroundColor(.white))
         .padding(EdgeInsets(top: top, leading: leading, bottom: bottom, trailing: trailling))
         

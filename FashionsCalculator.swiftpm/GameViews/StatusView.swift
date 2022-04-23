@@ -18,21 +18,12 @@ struct StatusView: View {
     var body: some View {
         ZStack(){
             VStack{
-                Spacer()
                 ItenView(iconName: "plusIten", numberOfItens: plusStatus, textColor: "red")
-                Spacer()
                 ItenView(iconName: "minusIten", numberOfItens: minusStatus, textColor: "blue")
-                Spacer()
                 ItenView(iconName: "multiplyIten", numberOfItens: multiplyStatus, textColor: "green")
-                Spacer()
                 ItenView(iconName: "divideIten", numberOfItens: divideStatus, textColor: "brown")
-                Spacer()
-            }
-            .frame(width: 113, height: 400)
-        }
-        .padding(.top, 50)
-        .padding(.leading, 20)
-
+            }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+        }.background(RoundedRectangle(cornerRadius: 20).foregroundColor(Color("lightgray")))
     }
         
 }
@@ -42,17 +33,16 @@ struct ItenView: View {
     var numberOfItens: Int
     var textColor: String
     var bg: String = "itenbg"
-    var spacing: CGFloat = 20
     
     var body: some View {
         ZStack{
-            Image(bg)
-            HStack(alignment: .center, spacing: spacing){
+            HStack(alignment: .center){
                 Image(iconName)
                 Text(String(numberOfItens))
-                    .font(.system(size: 55, weight: .light, design: .default))
+                    .font(Font.custom("ArimaMadurai-Black", size: 55))
                     .foregroundColor(Color(textColor))
             }
-        }
+            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+        }.background(RoundedRectangle(cornerRadius: 20).foregroundColor(Color("gray")))
     }
 }
