@@ -18,7 +18,9 @@ struct TimerTutorialView: View {
                 Button() {
                     selection = 1
                 } label: {
-                    Image("next")
+                    Text("next >>")
+                        .font(Font.custom("ArimaMadurai-Black", size: 30))
+                        .foregroundColor(Color("orange"))
                 }
                 .foregroundColor(.primaryOrange)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: geometry.size.height * 0.12, trailing: geometry.size.width  * 0.7))

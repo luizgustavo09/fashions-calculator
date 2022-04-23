@@ -1,12 +1,10 @@
 {
   "images" : [
     {
-      "filename" : "bad2environment@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bad2environment@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

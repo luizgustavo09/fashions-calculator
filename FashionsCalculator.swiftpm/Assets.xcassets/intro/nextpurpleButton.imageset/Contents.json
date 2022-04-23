@@ -5,12 +5,10 @@
       "scale" : "1x"
     },
     {
-      "filename" : "nextpurpleButton@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "nextpurpleButton@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

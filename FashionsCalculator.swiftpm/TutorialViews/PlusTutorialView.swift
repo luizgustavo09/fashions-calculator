@@ -19,7 +19,9 @@ struct PlusTutorialView: View {
                 Button() {
                     selection = 1
                 } label: {
-                    Image("next")
+                    Text("next >>")
+                        .font(Font.custom("ArimaMadurai-Black", size: 30))
+                        .foregroundColor(Color("orange"))
 
                 }
                 .foregroundColor(.primaryOrange)

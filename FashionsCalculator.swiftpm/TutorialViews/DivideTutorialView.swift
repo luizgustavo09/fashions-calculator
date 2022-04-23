@@ -18,7 +18,9 @@ struct DivideTutorialView: View {
                 Button() {
                     selection = 1
                 } label: {
-                    Image("next")
+                    Text("next >>")
+                        .font(Font.custom("ArimaMadurai-Black", size: 30))
+                        .foregroundColor(Color("orange"))
                 }
                 .foregroundColor(.primaryOrange)
                 .padding(EdgeInsets(top: geometry.size.height * 0.6, leading: 0, bottom: 0, trailing: geometry.size.width  * 0.8))

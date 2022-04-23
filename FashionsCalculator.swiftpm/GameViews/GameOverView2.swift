@@ -54,9 +54,10 @@ struct GameOverSubview2: View{
                     Button {
                         index+=1
                     } label: {
-                        Image("next")
+                        Text("next >>")
+                            .font(Font.custom("ArimaMadurai-Black", size: 30))
+                            .foregroundColor(Color("orange"))
                     }
-                    
                 }
             }.padding(EdgeInsets(top: 50, leading: 50, bottom: 50, trailing: 50))
 

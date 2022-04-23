@@ -1,12 +1,10 @@
 {
   "images" : [
     {
-      "filename" : "god2humanity@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "positivehumanity@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
