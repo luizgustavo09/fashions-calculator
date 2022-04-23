@@ -18,8 +18,8 @@ struct ScoreTutorialView: View {
                 Button() {
                     selection = 1
                 } label: {
-                    Text("next >>")
-                        .font(.system(size: 30))
+                    Image("next")
+
                 }
                 .foregroundColor(.primaryOrange)
                 .padding(EdgeInsets(top: 0, leading: geometry.size.width  * 0.80, bottom: 0, trailing:0))

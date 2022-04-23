@@ -28,9 +28,6 @@ struct LauchingView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
-        .environmentObject(IntroViewModel())
-//        NavigationLink(destination: Intro(), tag: 1, selection: $selection) {
-//            EmptyView()
-//        }
+
     }
 }

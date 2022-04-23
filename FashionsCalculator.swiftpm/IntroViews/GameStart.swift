@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameStart: View {
     @State var selection: Int? = nil
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -16,20 +17,13 @@ struct GameStart: View {
                     .resizable()
                     .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-                Button() {
-                    selection = 1
-                } label: {
+                NavigationLink(destination: HowToPlayTutorialView()) {
                     Image("playButton")
-                        .resizable()
-                        .edgesIgnoringSafeArea(.all)
-                        .padding(EdgeInsets(top: geometry.size.height * 0.8, leading: geometry.size.width *  0.55, bottom: geometry.size.height * 0.2, trailing: geometry.size.width * 0.05))
-                }
+                }.padding(EdgeInsets(top: geometry.size.height * 0.8, leading: geometry.size.width *  0.55, bottom: geometry.size.height * 0.2, trailing: geometry.size.width * 0.05))
             }
         }
         .statusBar(hidden: true)
         .navigationBarHidden(true)
-        NavigationLink(destination: HowToPlayTutorialView(), tag: 1, selection: $selection) {
-            EmptyView()
-        }
+        
     }
 }

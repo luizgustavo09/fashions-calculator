@@ -16,40 +16,33 @@ struct CalculatorView: View {
     @Binding var didTapButton: Bool
 
     var body: some View {
-        ZStack(){
+        ZStack(alignment: .center){
             Image("calculatorbg")
-            HStack{
-                Spacer()
+            HStack(alignment: .center, spacing: 50){
                     CalculatorButton(iconName: "plusButton"){
                         plusStatus+=1
                         viewIndex+=1
                         didTapButton.toggle()
                     }
-                Spacer()
                     CalculatorButton(iconName: "minusButton"){
                         minusStatus+=1
                         viewIndex+=1
                         didTapButton.toggle()
 
                     }
-                Spacer()
                     CalculatorButton(iconName: "mutiplyButton"){
                         multiplyStatus+=1
                         viewIndex+=1
                         didTapButton.toggle()
 
                     }
-                Spacer()
                     CalculatorButton(iconName: "divideButton"){
                         divideStatus+=1
                         viewIndex+=1
                         didTapButton.toggle()
                     }
-                Spacer()
             }
         }
-        .frame(width: 846, height: 210)
-        .padding(.bottom, 180)
     }
 }
 

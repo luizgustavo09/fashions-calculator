@@ -16,7 +16,7 @@ struct StatusView: View {
     var multiplyStatus: Int
     
     var body: some View {
-        ZStack{
+        ZStack(){
             VStack{
                 Spacer()
                 ItenView(iconName: "plusIten", numberOfItens: plusStatus, textColor: "red")
@@ -30,7 +30,9 @@ struct StatusView: View {
             }
             .frame(width: 113, height: 400)
         }
-        .padding(EdgeInsets(top: 50, leading: 50, bottom: 950, trailing: 850))
+        .padding(.top, 50)
+        .padding(.leading, 20)
+
     }
         
 }
@@ -39,18 +41,17 @@ struct ItenView: View {
     var iconName: String
     var numberOfItens: Int
     var textColor: String
+    var bg: String = "itenbg"
+    var spacing: CGFloat = 20
     
     var body: some View {
         ZStack{
-            Image("itenbg")
-            HStack{
-                Spacer()
+            Image(bg)
+            HStack(alignment: .center, spacing: spacing){
                 Image(iconName)
-                Spacer()
                 Text(String(numberOfItens))
                     .font(.system(size: 55, weight: .light, design: .default))
                     .foregroundColor(Color(textColor))
-                Spacer()
             }
         }
     }
