@@ -15,7 +15,7 @@ struct GameOverView3: View{
     
     var body: some View{
         ZStack (alignment: .bottomLeading){
-            Image("gameoverbg")
+            Image("gameoverbg2")
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)

@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "startButton.png",
+      "filename" : "startButton.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },

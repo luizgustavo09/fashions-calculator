@@ -1,8 +1,11 @@
 import SwiftUI
+import AVKit
+
 
 struct LauchingView: View {
     @State private var dragOffset = CGSize.zero
     @State var selection: Int? = nil
+    @State var audioPlayer: AVAudioPlayer!
 
     var body: some View {
         NavigationView {
@@ -25,9 +28,21 @@ struct LauchingView: View {
 //                            )
                 }
             }
+            .onAppear {
+                    if let sound = Bundle.main.url(forResource: "BGmusic", withExtension: "mp3") {
+                        do {
+                            try self.audioPlayer = AVAudioPlayer(contentsOf: sound)
+                            self.audioPlayer?.numberOfLoops = 5
+                            self.audioPlayer?.play()
+                        } catch {
+                            print("Couldn't play audio. Error: \(error)")
+                        }
+                    } else {
+                        print("No audio file found")
+                }
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
-
     }
 }

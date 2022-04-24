@@ -1,14 +1,11 @@
 //
-//  Intro.swift
-//  FashionsCalculator
-//
-//  Created by Luiz Gustavo Silva Aguiar on 18/04/22.
-//
 
 import SwiftUI
+import AVKit
 
 struct Intro: View {
     @State var index: Int = 0
+    @State var audioPlayer: AVAudioPlayer!
     
     var body: some View {
         GeometryReader { geometry in
@@ -27,9 +24,11 @@ struct Intro: View {
                     
                     BalloonView(text: texts[index], top: UIScreen.main.bounds.size.height * 0.2, leading: geometry.size.height * 0.04, bottom: 0, trailling: geometry.size.width * 0.5, index: $index)
                 }
-            }else{
+            } else{
                 GameStart()
             }
         }
+        .navigationBarHidden(true)
+        .statusBar(hidden: true)
     }
 }

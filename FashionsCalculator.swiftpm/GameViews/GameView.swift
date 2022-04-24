@@ -22,26 +22,27 @@ struct GameView: View {
                 Image(clothes[viewIndex])
                     .resizable()
                     .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
                 VStack(){
                     HStack(alignment: .top){
                         StatusView(plusStatus: plusStatus, minusStatus: minusStatus, divideStatus: divideStatus, multiplyStatus: multiplyStatus)
-                            .padding(.top, 150)
+                            .padding(.top, 45)
                             .padding(.leading, 50)
                         Spacer()
                         if didTapButton{
                             TimerView(viewIndex: $viewIndex, time: 8)
-                                .padding(.top, 150)
+                                .padding(.top, 45)
                                 .padding(.trailing, 50)
                         }else{
                             TimerView(viewIndex: $viewIndex)
-                                .padding(.top, 150)
+                                .padding(.top, 45)
                                 .padding(.trailing, 50)
 
                         }
                     }
                     Spacer()
                 CalculatorView(plusStatus: $plusStatus, minusStatus: $minusStatus, divideStatus: $divideStatus, multiplyStatus: $multiplyStatus, viewIndex: $viewIndex, didTapButton: $didTapButton)
-                        .padding(.bottom, 100)
+                        .padding(.bottom, 15)
                 }
             }
             else{

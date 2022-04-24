@@ -30,7 +30,7 @@ struct GameOverView: View{
         case 6:
             GameOverView6(plusStatus: plusStatus, minusStatus: minusStatus, divideStatus: divideStatus, multiplyStatus: multiplyStatus, index: $index)
         case 0:
-            LauchingView()
+            GameStart()
         default:
             GameView()
         }

@@ -27,7 +27,7 @@ struct MultiplyTutorialView: View {
 
                 }
                 .foregroundColor(.primaryOrange)
-                .padding(EdgeInsets(top: geometry.size.height * 0.6, leading: 0, bottom: 0, trailing: geometry.size.width  * 0.8))
+                .padding(EdgeInsets(top: geometry.size.height * 0.6, leading: geometry.size.width  * 0.8, bottom: 0, trailing: 0))
                 
             }
             .statusBar(hidden: true)

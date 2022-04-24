@@ -27,7 +27,7 @@ struct ScoreTutorialView: View {
 
                 }
                 .foregroundColor(.primaryOrange)
-                .padding(EdgeInsets(top: 0, leading: geometry.size.width  * 0.80, bottom: 0, trailing:0))
+                .padding(EdgeInsets(top: geometry.size.height * 0.6, leading: geometry.size.width  * 0.8, bottom: 0, trailing: 0))
                 
             }
             .statusBar(hidden: true)

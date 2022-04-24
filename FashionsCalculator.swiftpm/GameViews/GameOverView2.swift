@@ -16,7 +16,7 @@ struct GameOverView2: View{
     
     var body: some View{
         ZStack (alignment: .bottomLeading){
-            Image("gameoverbg")
+            Image("gameoverbg2")
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
@@ -51,6 +51,7 @@ struct GameOverSubview2: View{
                     .font(Font.custom("ArimaMadurai-Black", size: 50))
                     .foregroundColor(Color("purple"))
                 HStack(){
+                    Spacer()
                     Button {
                         index+=1
                     } label: {

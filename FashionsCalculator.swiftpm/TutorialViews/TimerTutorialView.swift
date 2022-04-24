@@ -26,7 +26,7 @@ struct TimerTutorialView: View {
                         .foregroundColor(Color("orange"))
                 }
                 .foregroundColor(.primaryOrange)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: geometry.size.height * 0.12, trailing: geometry.size.width  * 0.7))
+                .padding(EdgeInsets(top: geometry.size.height * 0.6, leading: geometry.size.width  * 0.8, bottom: 0, trailing: 0))
                 
             }
             .statusBar(hidden: true)

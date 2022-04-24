@@ -15,7 +15,7 @@ struct GameOverView6: View{
     
     var body: some View{
         ZStack (alignment: .bottomLeading){
-            Image("gameoverbg")
+            Image("gameoverbg3")
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
@@ -64,6 +64,7 @@ struct TextsView: View{
         self.result = (minusStatus * -30)+(multiplyStatus*30)+(divideStatus*60)
     }
     
+    
     var body: some View{
         VStack(alignment: .center, spacing: 22){
             HStack(alignment: .center, spacing: 30){
@@ -75,13 +76,22 @@ struct TextsView: View{
                     .font(Font.custom("ArimaMadurai-Black", size: 60))
 
             }
-            Text("you are a beginner, good job...")
-                .foregroundColor(Color("yellow"))
-                .font(Font.custom("ArimaMadurai-Black", size: 30))
-
-            Text("but you can do better for the environment!!")
-                .foregroundColor(.white)
-                .font(Font.custom("ArimaMadurai-Black", size: 30))
+            if self.result < 20 {
+                Text("you are a beginner, good job...")
+                    .foregroundColor(Color("yellow"))
+                    .font(Font.custom("ArimaMadurai-Black", size: 30))
+                Text("but you can do better for the environment!!")
+                    .foregroundColor(.white)
+                    .font(Font.custom("ArimaMadurai-Black", size: 30))
+            }
+            else if self.result >= 20 && self.result < 500 {
+                Text("o tamanho da minha pika deixou a novinha louca...")
+                    .foregroundColor(Color("yellow"))
+                    .font(Font.custom("ArimaMadurai-Black", size: 30))
+                Text("but you can do better for the environment!!")
+                    .foregroundColor(.white)
+                    .font(Font.custom("ArimaMadurai-Black", size: 30))
+            }
         }
     }
 }
